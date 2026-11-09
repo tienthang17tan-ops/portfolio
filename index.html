@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Portfolio của Nguyễn Toàn Thắng, Graphic Designer: poster, banner, quảng cáo sản phẩm, nhận diện thương hiệu và motion poster.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23140e33'/%3E%3Ctext x='32' y='43' font-size='30' font-weight='800' text-anchor='middle' fill='%23ff5c93' font-family='Arial'%3ETT%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#140e33">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nguyễn Toàn Thắng | Graphic Designer">
+<meta property="og:description" content="Logo, nhận diện thương hiệu, poster chuyển động, banner và quảng cáo sản phẩm.">
+<meta property="og:url" content="https://ngtoanthangoii.netlify.app/">
+<meta property="og:image" content="https://ngtoanthangoii.netlify.app/avatar.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nguyễn Toàn Thắng","jobTitle":"Graphic Designer","email":"tienthang17tan@gmail.com","url":"https://ngtoanthangoii.netlify.app/","address":{"@type":"PostalAddress","addressRegion":"Hưng Yên","addressCountry":"VN"}}</script>
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Nguyễn Toàn Thắng | Graphic Designer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Concept: cream and white paper (about 70%), navy as the ink (about 30%): giant name, marquee band, folder icons, the hanging ID card.
+   The card is the one glowing object on the page. */
+:root{
+  --bg:#f6f4fb; --bg2:#e9e5f5; --white:#ffffff; --ink:#140e33; --mute:#5f5a80; --line:rgba(20,14,51,.16);
+  --navy:#140e33; --navy2:#6a47f5; --name:#fff; --cream:#f6f4fb; --sand:#ffb08a; --sky:#4cd8ff; --deep:#140e33;
+  --hot:#ff5c93; --hot-ink:#d6336f; --card1:#2a1a7a; --card2:#6a47f5;
+  --display:'Bricolage Grotesque','Be Vietnam Pro',system-ui,sans-serif;
+  --body:'Be Vietnam Pro',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+/* dark only when the visitor presses the toggle, never from the OS setting */
+:root[data-theme="dark"]{--bg:#0e0926;--bg2:#1a1340;--white:#150f36;--ink:#f1edff;--mute:#b8b0d8;--line:rgba(241,237,255,.18);--navy:#6a47f5;--navy2:#8f74ff;--hot-ink:#ff7aa6;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--body);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--deep)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--hot);outline-offset:3px}
+.wrap{max-width:1212px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(20,14,51,.9);color:#fff;backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.12);padding-block:12px}
+.bar .btn:hover{background:var(--hot);border-color:var(--hot);color:var(--deep)}
+.bar .wrap{display:flex;align-items:center;gap:16px;justify-content:space-between}
+.logo{font:700 17px var(--display);text-decoration:none;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.logo i{width:16px;height:16px;border-radius:50%;background:var(--navy2);box-shadow:8px 0 0 var(--hot);margin-right:8px}
+nav{display:flex;gap:26px}
+nav a{text-decoration:none;font:500 13px var(--body);color:#cfc6ee}
+nav a:hover{color:#fff}
+.tools{display:flex;gap:8px}
+.btn{font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;border:1px solid currentColor;background:transparent;color:inherit;padding:8px 13px;border-radius:99px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+@media(max-width:760px){nav{display:none}}
+
+/* hero: light, the name is the navy mass */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(560px circle at var(--sx,70%) var(--sy,30%),rgba(255,92,147,.22),transparent 62%),
+  radial-gradient(900px circle at 85% 0%,rgba(122,92,255,.5),transparent 60%),
+  radial-gradient(800px circle at 0% 100%,rgba(76,216,255,.14),transparent 60%),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 96px),var(--deep);
+  color:#fff;touch-action:pan-y;cursor:crosshair;user-select:none;-webkit-user-select:none}
+.hero .wrap{position:relative;padding-block:clamp(42px,4.5vw,60px) clamp(24px,4vw,44px)}
+.hmeta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#cfc6ee}
+.name{margin:clamp(40px,9vw,128px) 0 0;font:800 clamp(88px,29vw,360px)/.95 var(--display);letter-spacing:-.035em;padding-top:.1em;white-space:nowrap;isolation:isolate;position:relative}
+.hrow{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.22);padding-top:18px;margin-top:6px}
+.pill{display:inline-block;background:var(--hot);color:var(--deep);font:600 clamp(14px,2vw,19px) var(--display);padding:6px 16px;border-radius:99px}
+.hsub{margin:10px 0 0;color:#d6cdfa;font-size:clamp(15px,1.8vw,18px);max-width:34ch}
+.hint{color:#fff;display:flex;align-items:center;gap:10px}
+.hint::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--hot);animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.9);opacity:.35}}
+.ripple{position:absolute;width:220px;height:220px;margin:-110px 0 0 -110px;border-radius:50%;border:2px solid var(--hot);pointer-events:none}
+.crop{position:absolute;width:22px;height:22px;border:0 solid #fff;opacity:.4}
+.crop.a{top:14px;left:max(16px,env(safe-area-inset-left,0px));border-top-width:1px;border-left-width:1px}
+.crop.b{top:14px;right:max(16px,env(safe-area-inset-right,0px));border-top-width:1px;border-right-width:1px}
+
+.marq{position:relative;overflow:hidden;color:#fff;padding:10px 0;background:
+  linear-gradient(135deg,rgba(255,255,255,.09) 25%,transparent 25% 50%,rgba(255,255,255,.09) 50% 75%,transparent 75%) 0 0/40px 40px,
+  linear-gradient(90deg,#2a1a7a,#4a2fc2 50%,#2a1a7a);animation:belt .5s linear infinite}
+.marq::before,.marq::after{content:"";position:absolute;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--hot) 0 14px,transparent 14px 28px);animation:rail .35s linear infinite}
+.marq::before{top:0}.marq::after{bottom:0}
+.marq div{display:flex;width:max-content;animation:mq var(--dur,30s) linear infinite;padding:6px 0}
+.marq span{font:600 clamp(16px,2.4vw,24px) var(--display);padding:0 26px;white-space:nowrap;display:flex;align-items:center;gap:52px}
+.marq span::after{content:"";width:9px;height:9px;background:var(--hot);border-radius:50%;box-shadow:0 0 10px var(--hot)}
+@keyframes mq{to{transform:translateX(calc(var(--w,1200px) * -1))}}
+@keyframes belt{to{background-position:-40px 0,0 0}}
+@keyframes rail{to{background-position-x:-28px}}
+
+section{padding-block:clamp(52px,8vw,104px)}
+.alt{background:var(--white)}
+.h2{font:700 clamp(30px,5vw,58px)/1.04 var(--display);letter-spacing:-.03em;margin:0 0 34px;text-wrap:balance}
+.h2 small{display:block;font:500 12px var(--mono);letter-spacing:.1em;color:var(--hot-ink);margin-bottom:14px;text-transform:uppercase}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,5vw,72px);align-items:start}
+.photo{position:relative;aspect-ratio:4/5;background:var(--bg);border:1px dashed var(--navy);border-radius:4px;display:grid;place-items:center;text-align:center;color:var(--mute);overflow:hidden}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo b{display:block;font:600 15px var(--display);color:var(--ink);margin-bottom:4px}
+.photo i{position:absolute;width:18px;height:18px;border:0 solid var(--navy)}
+.photo i:nth-child(1){top:10px;left:10px;border-top-width:1px;border-left-width:1px}
+.photo i:nth-child(2){top:10px;right:10px;border-top-width:1px;border-right-width:1px}
+.photo i:nth-child(3){bottom:10px;left:10px;border-bottom-width:1px;border-left-width:1px}
+.photo i:nth-child(4){bottom:10px;right:10px;border-bottom-width:1px;border-right-width:1px}
+.about p{margin:0 0 18px;font-size:clamp(17px,1.9vw,20px);line-height:1.65;max-width:58ch}
+.facts{margin:28px 0 0;border-top:1px solid var(--navy)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.facts dt{color:var(--mute)}.facts dd{margin:0;text-align:right;font-weight:500}
+@media(max-width:820px){.about{grid-template-columns:1fr}.photo{max-width:360px}}
+
+/* folders */
+.folds{border-top:1px solid var(--navy)}
+.fold{border-bottom:1px solid var(--navy)}
+.fh{width:100%;display:grid;grid-template-columns:30px 1fr auto 22px;gap:14px;align-items:center;padding:13px 4px;background:none;border:0;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.fh:hover{background:var(--white)}
+.ficon{position:relative;width:26px;height:19px;background:var(--navy);border-radius:2px 4px 4px 4px;margin-top:3px;opacity:.45}
+.ficon::before{content:"";position:absolute;left:0;top:-4px;width:11px;height:6px;background:inherit;border-radius:2px 3px 0 0}
+.fold.has .ficon{opacity:1}
+.fold.has .ficon::after{content:"";position:absolute;right:-3px;top:-3px;width:8px;height:8px;border-radius:50%;background:var(--hot)}
+.ft{font:600 clamp(17px,2.2vw,22px) var(--display);letter-spacing:-.015em}
+.fc{color:var(--mute)}
+.chev{font:500 20px var(--mono);transition:transform .25s;text-align:center}
+.fold.open .chev{transform:rotate(45deg)}
+.fb{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.fold.open .fb{grid-template-rows:1fr}
+.fb>div{overflow:hidden;min-height:0}
+.fb p{margin:2px 0 16px 44px;color:var(--mute);max-width:60ch;font-size:15px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:12px;margin:0 0 22px 44px}
+.th{display:block;padding:0;border:0;background:var(--bg2);cursor:pointer;border-radius:3px;overflow:hidden;aspect-ratio:4/5;position:relative}
+.th img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.th:hover img{transform:scale(1.06)}
+.th video{width:100%;height:100%;object-fit:cover;display:block}
+.th .play{position:absolute;top:8px;right:8px;width:26px;height:26px;border-radius:50%;background:rgba(10,22,60,.75);color:#fff;font:normal 10px/26px var(--mono);text-align:center}
+.card .art video{width:100%;max-height:90vh;display:block;background:#000}
+.th span{position:absolute;left:0;right:0;bottom:0;padding:18px 8px 7px;font:500 12px var(--body);color:#f6efe1;background:linear-gradient(transparent,rgba(10,22,60,.85));text-align:left}
+.slot{aspect-ratio:4/5;border:1px dashed var(--mute);border-radius:3px;display:grid;place-items:center;text-align:center;color:var(--mute);padding:8px}
+.slot b{display:block;font:500 22px var(--mono);color:var(--hot-ink)}
+@media(max-width:560px){.fb p,.thumbs{margin-left:0}.fh{grid-template-columns:26px 1fr 20px}.fc{display:none}}
+
+.modal{position:fixed;inset:0;z-index:100;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(6px);display:grid;place-items:center;padding:20px}
+.modal[hidden]{display:none}
+.card{width:min(1100px,100%);max-height:92vh;overflow:auto;background:var(--white);border:1px solid var(--navy);border-radius:8px;display:grid;grid-template-columns:1.6fr 1fr}
+.card .art{background:var(--bg2);display:grid;place-items:center}
+.card .art img{width:100%;height:auto;max-height:90vh;object-fit:contain;display:block}
+.card .info{padding:26px;display:flex;flex-direction:column;gap:14px}
+.card h3{margin:0;font:700 clamp(24px,4vw,38px)/1.05 var(--display);letter-spacing:-.03em}
+.card .x{align-self:flex-end}
+@media(max-width:720px){.card{grid-template-columns:1fr}}
+
+/* contact: hanging ID card */
+.contact{background:radial-gradient(800px circle at 88% 10%,rgba(122,92,255,.45),transparent 60%),radial-gradient(600px circle at 0% 90%,rgba(255,92,147,.16),transparent 60%),var(--deep);color:#fff;overflow:hidden}
+.contact .h2 small{color:var(--hot)}
+.contact .btn:hover{background:#fff;color:var(--deep);border-color:#fff}
+.cgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:start}
+.cgrid .lead{padding-top:clamp(0px,3vw,36px)}
+.mail{font:700 clamp(22px,3.6vw,44px)/1.1 var(--display);letter-spacing:-.03em;word-break:break-all;display:block;margin:0 0 22px;color:#fff;transition:color .2s}
+.mail:hover{color:var(--hot)}
+.lead p{max-width:44ch;color:#d6cdfa;margin:0 0 24px}
+.row2{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.stage{position:relative;height:clamp(700px,100vw,740px);display:flex;justify-content:center;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.strap{position:absolute;left:50%;top:0;width:26px;margin-left:-13px;transform-origin:50% 0;
+  background:repeating-linear-gradient(180deg,#6a47f5 0 14px,#8f74ff 14px 28px);border-radius:0 0 3px 3px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.strap::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;margin-left:-1.5px;background:var(--hot);opacity:.9}
+.hang{position:absolute;left:50%;top:var(--L);width:min(318px,calc(100% - 8px));margin-left:calc(min(318px,100% - 8px)/-2);transform-origin:50% 0;touch-action:none;cursor:grab;will-change:transform}
+.hang.drag{cursor:grabbing}
+.clip{position:absolute;left:50%;top:-22px;width:46px;height:30px;margin-left:-23px;border-radius:7px 7px 4px 4px;background:linear-gradient(180deg,#f2f0ea,#aeb4c3);box-shadow:0 2px 6px rgba(0,0,0,.25);z-index:3}
+.clip::after{content:"";position:absolute;left:50%;bottom:5px;width:22px;height:6px;margin-left:-11px;border-radius:3px;background:#5b6378}
+.id{position:relative;border-radius:26px;padding:22px 22px 24px;color:#f6efe1;overflow:hidden;
+  background:radial-gradient(240px circle at var(--gx,50%) var(--gy,20%),rgba(255,255,255,.22),transparent 60%),linear-gradient(165deg,var(--card2),var(--card1) 70%);
+  box-shadow:0 0 calc(26px + 46px*var(--g,0)) rgba(255,92,147,calc(.28 + .4*var(--g,0))),0 0 calc(60px + 60px*var(--g,0)) rgba(122,92,255,calc(.35 + .3*var(--g,0))),0 18px 40px rgba(10,22,60,.35);
+  border:1px solid rgba(255,255,255,.22)}
+.id::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;background:conic-gradient(from var(--ang,0deg),transparent 0 55%,rgba(255,92,147,.95) 72%,rgba(122,92,255,.9) 88%,transparent);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;animation:spin 5s linear infinite}
+@property --ang{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes spin{to{--ang:360deg}}
+.slotbar{width:64px;height:10px;border-radius:99px;background:rgba(8,18,52,.7);margin:0 auto 14px;box-shadow:inset 0 1px 2px rgba(0,0,0,.5)}
+.idtop{display:flex;justify-content:space-between;align-items:center;font:800 26px var(--display);letter-spacing:-.04em}
+.idtop span{font:500 11px var(--mono);letter-spacing:.06em;opacity:.8;text-transform:uppercase}
+.avatar{position:relative;width:152px;height:152px;margin:16px auto 14px;border-radius:50%;padding:5px;
+  background:conic-gradient(from var(--ang,0deg),var(--hot),var(--sand),var(--sky),var(--hot));animation:spin 6s linear infinite;
+  box-shadow:0 0 calc(22px + 30px*var(--g,0)) rgba(255,92,147,.7)}
+.avatar>div{width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 50% 35%,#27478f,#0e2152);display:grid;place-items:center;overflow:hidden;font:800 46px var(--display);letter-spacing:-.04em}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.idname{text-align:center;font:700 30px/1.1 var(--display);letter-spacing:-.03em}
+.idname small{font:500 16px var(--body);opacity:.7;letter-spacing:0}
+.idrole{text-align:center;color:#ffc2d6;font:500 14px var(--body);margin:4px 0 16px}
+.dash{border-top:2px dashed rgba(246,239,225,.35);margin:0 -6px 14px}
+.irow{display:flex;align-items:center;gap:12px;padding:8px 2px;font-size:14.5px;background:none;border:0;color:inherit;text-align:left;width:100%;cursor:pointer;font-family:var(--body);word-break:break-all}
+.irow svg{flex:none;width:20px;height:20px;color:#ff8fb3;filter:drop-shadow(0 0 5px rgba(255,92,147,.8))}
+.irow:hover svg{color:#fff}
+.go{display:block;margin-top:16px;text-align:center;background:#fff;color:var(--card1);font:600 15px var(--display);padding:13px 16px;border-radius:99px;text-decoration:none;
+  box-shadow:0 0 0 0 rgba(255,92,147,.6);animation:glow 2.4s ease-in-out infinite;transform:rotate(-1.6deg)}
+@keyframes glow{50%{box-shadow:0 0 0 7px rgba(255,92,147,0),0 0 26px 4px rgba(255,160,110,.7)}}
+.go:hover{background:#fff}
+.tryit{white-space:nowrap;position:absolute;left:50%;top:calc(var(--L) + 530px);transform:translateX(-50%);z-index:4;background:rgba(246,239,225,.94);color:var(--navy);border:1px solid var(--navy);border-radius:99px;padding:6px 14px;font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.05em;pointer-events:none;transition:opacity .4s}
+.tryit.off{opacity:0}
+@media(max-width:860px){.cgrid{grid-template-columns:1fr}.stage{order:2}}
+footer{padding-block:24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--mute)}
+
+@media(prefers-reduced-motion:no-preference){.js [data-r]{animation:up .8s cubic-bezier(.2,.7,.2,1) both}}
+@keyframes up{from{opacity:0;transform:translateY(24px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.s3{display:flex;position:relative;perspective:1500px;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.t3{display:inline-block;position:relative;transform-style:preserve-3d;font-style:normal;will-change:transform}
+.L{position:absolute;left:0;top:0;white-space:nowrap;font-style:normal;font-variation-settings:'wght' 760,'wdth' 100,'opsz' 96}
+.L.base{position:relative}
+.L.face{background:linear-gradient(100deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.8) 50%,rgba(255,255,255,0) 70%) var(--sh,50%) 0/260% 100% no-repeat,linear-gradient(180deg,#fff7d6 0%,#ffd27a 38%,#ff8a5c 74%,#ff5c93 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.glow{position:absolute;left:0;top:0;pointer-events:none;animation:flick 2.6s ease-in-out infinite}
+.gl{position:absolute;left:0;top:0;white-space:nowrap;font-style:normal;font-variation-settings:'wght' 760,'wdth' 100,'opsz' 96;color:transparent;background:linear-gradient(100deg,#ff8a3d 0%,#ff5c93 48%,#7a5cff 100%);-webkit-background-clip:text;background-clip:text;animation:hue 5s ease-in-out infinite alternate}
+.gl+.gl{opacity:.7}
+@keyframes hue{from{filter:blur(var(--b)) hue-rotate(-30deg)}to{filter:blur(var(--b)) hue-rotate(40deg)}}
+@keyframes flick{0%,100%{opacity:.95}20%{opacity:.7}45%{opacity:1}70%{opacity:.68}}
+.fire{position:absolute;left:0;pointer-events:none;transform:translateZ(.158em);backface-visibility:hidden}
+.avail{display:inline-flex;align-items:center;gap:10px;margin:0 0 14px;font:500 14px var(--body);color:#fff}
+.avail::before{content:"";width:10px;height:10px;border-radius:50%;background:#3ee08f;animation:ping 1.8s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(62,224,143,.6)}70%,100%{box-shadow:0 0 0 10px rgba(62,224,143,0)}}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.cta .btn{display:inline-block;text-decoration:none;padding:11px 20px;font:600 14px var(--body);text-transform:none;letter-spacing:0}
+.cta .btn.hot{background:var(--hot);border-color:var(--hot);color:var(--deep)}
+.cta .btn:hover{background:#fff;border-color:#fff;color:var(--deep)}
+#resume{background:var(--bg2)}
+.rgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(24px,5vw,72px)}
+@media(max-width:820px){.rgrid{grid-template-columns:1fr}}
+.rgrid h3{margin:0 0 14px;font:700 clamp(20px,2.4vw,28px) var(--display);letter-spacing:-.02em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}
+.chips span{font:500 14px var(--body);padding:8px 14px;border:1px solid var(--navy);border-radius:99px;background:var(--white)}
+.tl{margin:0 0 28px;border-left:2px solid var(--navy2);padding-left:24px;display:grid;gap:20px}
+.tl>div{position:relative}
+.tl>div::before{content:"";position:absolute;left:-31px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--hot);box-shadow:0 0 0 4px var(--bg2)}
+.tl b{display:block;font:700 17px var(--display)}
+.tl small{display:block;font-size:12px;color:var(--hot-ink);margin-bottom:2px}
+.tl p{margin:4px 0 0;color:var(--mute)}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.links a{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:8px 16px;font:500 14px var(--body)}
+.links a:hover{background:#fff;color:var(--deep)}
+#pt{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative;z-index:1}.name{transform-origin:0 100%}
+.photo img{filter:grayscale(1);transition:filter .6s}.photo:hover img{filter:none}
+@media(hover:none){.photo img{filter:none}}
+.sw{margin-top:26px}.sw>b{display:block;color:var(--mute);margin-bottom:10px}.sw div{display:flex;gap:10px;flex-wrap:wrap}
+.sw span{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border:1px solid var(--line);border-radius:99px;font-weight:500;background:var(--bg);transition:box-shadow .3s,border-color .3s}
+.sw i{font:800 13px var(--display);font-style:normal;width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:var(--deep);color:#ff8fb3}
+.sw span:nth-child(2) i{color:#ffb08a}.sw span:nth-child(3) i{color:#4cd8ff}.sw span:hover{border-color:var(--hot);box-shadow:0 0 18px rgba(255,92,147,.4)}
+.dark{background:radial-gradient(700px circle at 90% 0%,rgba(122,92,255,.4),transparent 60%),var(--deep);color:#fff}.dark .h2 small{color:var(--hot)}
+.sgrid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(150px,19vw,250px);gap:14px;grid-auto-flow:dense}
+.sc{position:relative;overflow:hidden;border:0;padding:0;border-radius:6px;background:#1f1747;cursor:pointer;color:#fff;text-align:left;grid-column:span 2}
+.sc.s0{grid-column:span 3;grid-row:span 2}.sc.s3,.sc.s6{grid-column:span 3}.sc.s5{grid-row:span 2}
+.sc img,.sc video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}.sc:hover img,.sc:hover video{transform:scale(1.06)}
+.sc .cap{position:absolute;inset:auto 0 0;padding:44px 16px 14px;background:linear-gradient(transparent,rgba(20,14,51,.92));opacity:0;transform:translateY(10px);transition:.35s}
+.sc:hover .cap,.sc:focus-visible .cap{opacity:1;transform:none}
+.sc small{display:block;color:var(--hot);font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.sc b{display:block;font:700 clamp(16px,1.8vw,22px)/1.15 var(--display)}.sc em{display:block;font-style:normal;color:#d6cdfa;font-size:13px;margin-top:4px}
+.sc .play{position:absolute;top:10px;right:10px;width:28px;height:28px;border-radius:50%;background:var(--hot);color:var(--deep);font:normal 10px/28px var(--mono);text-align:center}
+.swait{grid-column:1/-1;border:1px dashed rgba(255,255,255,.35);border-radius:6px;padding:48px;text-align:center;color:#d6cdfa}
+@media(hover:none){.sc .cap{opacity:1;transform:none}}
+@media(max-width:760px){.sgrid{grid-template-columns:repeat(2,1fr)}.sc,.sc.s3,.sc.s6{grid-column:span 1}.sc.s0{grid-column:span 2}}
+.fh:hover .ft{color:var(--hot-ink)}.fh:hover .fc::after{content:"  →  " attr(data-v);color:var(--hot-ink)}
+.kgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.kc{padding:22px;border:1px solid var(--line);border-radius:8px;background:var(--bg);transition:transform .3s,box-shadow .3s,border-color .3s}
+.kc:hover{transform:translateY(-4px);border-color:var(--hot);box-shadow:0 12px 30px -12px rgba(255,92,147,.5)}
+.kc i{font:800 18px var(--display);font-style:normal;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--deep);color:#ff8fb3;margin-bottom:14px}
+.kc b{display:block;font:700 18px var(--display)}.kc p{margin:4px 0 0;color:var(--mute);font-size:15px}
+@media(max-width:820px){.kgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.kgrid{grid-template-columns:1fr}}
+.steps{--p:0;position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:18px;list-style:none;padding:34px 0 0;margin:0}
+.steps::before,.steps::after{content:"";position:absolute;top:12px;left:0;height:2px}.steps::before{right:0;background:rgba(255,255,255,.18)}
+.steps::after{width:calc(var(--p)*100%);background:linear-gradient(90deg,#7a5cff,#ff5c93);box-shadow:0 0 12px #ff5c93}
+.steps li{position:relative}.steps li::before{content:"";position:absolute;top:-28px;left:0;width:12px;height:12px;border-radius:50%;background:#2a1f66;border:2px solid rgba(255,255,255,.3);transition:.4s}
+.steps li.on::before{background:var(--hot);border-color:var(--hot);box-shadow:0 0 14px var(--hot)}
+.steps i{font:500 12px var(--mono);font-style:normal;color:var(--hot)}.steps b{display:block;font:700 18px var(--display);text-transform:uppercase;margin:4px 0}.steps p{margin:0;color:#d6cdfa;font-size:14px}
+@media(max-width:820px){.steps{grid-template-columns:1fr;padding:0 0 0 30px;gap:26px}.steps::before,.steps::after{top:0;left:5px;right:auto;width:2px}.steps::before{height:100%}.steps::after{height:calc(var(--p)*100%)}.steps li::before{top:6px;left:-30px}}
+#cs{display:grid;gap:14px}#cs:empty{display:none}#cs small{color:var(--hot-ink)}#cs p{margin:2px 0 0;color:var(--mute)}.csn{display:flex;gap:8px;margin-top:auto;padding-top:8px}
+.foot{background:var(--deep);color:#fff;padding:clamp(40px,6vw,72px) 0 28px;border-top:1px solid rgba(255,255,255,.12)}.foot a{color:#fff;text-decoration:none}
+.fgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px;margin-bottom:40px}
+.flogo{font:800 clamp(40px,7vw,84px)/1 var(--display);letter-spacing:-.04em;background:linear-gradient(100deg,#fff,#ff8fb3 60%,#8f74ff);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+.fgrid p{margin:8px 0 0;color:#cfc6ee}.fnav{display:grid;gap:8px;align-content:start}.fnav a{color:#cfc6ee}.fnav a:hover,.fgrid a:hover{color:var(--hot)}
+.fbot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.18);padding-top:20px;color:#cfc6ee;font-size:14px}.fbot .tag{font-style:italic}
+.foot .btn:hover{background:#fff;color:var(--deep)}@media(max-width:760px){.fgrid{grid-template-columns:1fr}}
+html{scroll-padding-top:70px}
+@media(max-width:760px){html{scroll-padding-top:104px}.bar .wrap{flex-wrap:wrap;row-gap:6px}.bar nav{display:flex!important;order:3;width:100%;overflow-x:auto;gap:18px;padding:2px 0 4px;white-space:nowrap}}
+.lg{--g:#ff5c93;--s:46px;position:relative;display:inline-grid;place-items:center;flex:none;width:var(--s);height:var(--s);border-radius:22%;isolation:isolate;font-style:normal;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.lg::before{content:"";position:absolute;inset:-10px;border-radius:34%;background:conic-gradient(from 0deg,var(--g),transparent 30%,var(--g) 52%,transparent 78%,var(--g));filter:blur(12px);opacity:.55;z-index:-1;animation:lgspin 7s linear infinite,lgpulse 2.8s ease-in-out infinite alternate;transition:inset .35s,filter .35s}
+.lg::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 1px color-mix(in srgb,var(--g) 55%,transparent),0 0 14px color-mix(in srgb,var(--g) 55%,transparent);z-index:-1;animation:lgpulse 2.8s ease-in-out infinite alternate-reverse}
+.lg svg,.lg img{display:block;width:100%;height:100%;object-fit:contain;border-radius:22%}
+@keyframes lgspin{to{transform:rotate(360deg)}}@keyframes lgpulse{from{opacity:.35}to{opacity:.9}}
+.kc:hover .lg,.sw span:hover .lg{transform:translateY(-3px) scale(1.07)}.kc:hover .lg::before,.sw span:hover .lg::before{inset:-16px;filter:blur(16px)}
+@media(prefers-reduced-motion:reduce){.lg::before{animation:lgpulse 2.8s ease-in-out infinite alternate}}
+.sw div{gap:18px 16px}.sw span{padding:6px 16px 6px 7px}.sw .lg{--s:36px}
+.kc{padding:24px}.kc .lg{--s:56px;margin-bottom:20px}.kgrid+.kgrid{margin-top:14px}
+.ks{grid-template-columns:repeat(4,1fr)}@media(max-width:820px){.ks{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.ks{grid-template-columns:1fr}}
+.lg[data-lg=mg],.lg[data-lg=mg] svg,.lg[data-lg=mg] img,.lg[data-lg=mg]::before{border-radius:50%}
+.kc{position:relative;cursor:pointer}.sw span{cursor:pointer}
+.kc::after{content:"+";position:absolute;top:18px;right:20px;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font:500 18px/1 var(--mono);color:var(--mute);transition:.3s}
+.kc:hover::after,.kc:focus-visible::after{background:var(--hot);border-color:var(--hot);color:var(--deep);transform:rotate(90deg)}
+.khint{margin:-16px 0 26px;color:var(--mute)}
+.tcard{position:relative;width:min(680px,100%);max-height:92vh;overflow:auto;background:var(--white);border:1px solid var(--navy);border-radius:12px;padding:clamp(22px,4vw,36px);animation:tin .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes tin{from{opacity:0;transform:translateY(14px) scale(.98)}}
+.tx{position:absolute;top:16px;right:16px}
+.thead{display:flex;gap:26px;align-items:center;margin:6px 0 18px;padding-right:70px}.thead .lg{--s:72px}
+.thead h3{margin:0;font:700 clamp(26px,4vw,36px)/1.05 var(--display);letter-spacing:-.03em}.thead p{margin:6px 0 0;color:var(--mute)}
+.tbody h4{margin:22px 0 10px;font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--hot-ink)}
+.tbody ul{margin:0;padding-left:20px;display:grid;gap:6px}.tbody .chips{margin:0}.tbody p{margin:0}
+</style>
+
+
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <a class="logo" href="#top"><i></i>Toàn Thắng</a>
+  <nav><a href="#about" data-i="n_about"></a><a href="#selected" data-i="n_sel"></a><a href="#work" data-i="n_work"></a><a href="#skills" data-i="n_sk"></a><a href="#process" data-i="n_pr"></a><a href="#contact" data-i="n_contact"></a></nav>
+  <div class="tools">
+    <button class="btn" id="lang" aria-label="Language">VI / EN</button>
+    <button class="btn" id="theme" aria-label="Theme">◐</button>
+  </div>
+</div></header>
+
+<div class="hero" id="hero">
+  <canvas id="pt" aria-hidden="true"></canvas>
+  <span class="crop a"></span><span class="crop b"></span>
+  <div class="wrap" id="top">
+    <div class="hmeta mono"><span data-i="h_role"></span><span>Hưng Yên, VN · 2005</span></div>
+    <h1 class="name" id="name" aria-label="Thắng"><span class="s3" id="s3"><i class="t3" id="t3" data-t="Thắng"></i></span></h1>
+    <div class="hrow">
+      <div><div class="avail" data-i="avail"></div><span class="pill">Nguyễn Toàn Thắng</span><p class="hsub" data-i="h_sub"></p>
+        <div class="cta"><a class="btn hot" href="#selected" data-i="viewall"></a><a class="btn" id="apply" href="#contact" data-i="apply"></a><a class="btn" id="cvbtn" hidden target="_blank" rel="noopener" data-i="cv"></a></div></div>
+      <span class="hint mono" data-i="h_hint"></span>
+    </div>
+  </div>
+</div>
+
+<div class="marq" aria-hidden="true"><div id="mq"></div></div>
+
+<main>
+<section id="about" class="alt"><div class="wrap">
+  <h2 class="h2" data-r><small data-i="a_k"></small><span data-i="a_h"></span></h2>
+  <div class="about">
+    <div class="photo" id="photo" data-r><i></i><i></i><i></i><i></i>
+      <div id="phold"><b data-i="p_t"></b><span class="mono" data-i="p_s"></span></div></div>
+    <div data-r>
+      <p data-i="a_p1"></p><p data-i="a_p2"></p>
+      <dl class="facts mono">
+        <div><dt data-i="f1"></dt><dd>Nguyễn Toàn Thắng</dd></div>
+        <div><dt data-i="f2"></dt><dd>2005</dd></div>
+        <div><dt data-i="f3"></dt><dd data-i="f3v"></dd></div>
+        <div><dt data-i="f4"></dt><dd data-i="f4v"></dd></div>
+      </dl>
+      <div class="sw"><b class="mono" data-i="sw_t"></b><div><span tabindex="0" role="button"><em class="lg" data-lg="ps"></em>Photoshop</span><span tabindex="0" role="button"><em class="lg" data-lg="ai"></em>Illustrator</span><span tabindex="0" role="button"><em class="lg" data-lg="ca"></em>Canva</span><span tabindex="0" role="button"><em class="lg" data-lg="cl"></em>Claude</span><span tabindex="0" role="button"><em class="lg" data-lg="mg"></em>Magnific</span><span tabindex="0" role="button"><em class="lg" data-lg="cc"></em>CapCut</span></div></div>
+    </div>
+  </div>
+</div></section>
+
+
+<section id="selected" class="dark"><div class="wrap">
+  <h2 class="h2" data-r><small data-i="sel_k"></small><span data-i="sel_h"></span></h2>
+  <div class="sgrid" id="sgrid"></div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <h2 class="h2" data-r><small data-i="s_k"></small><span data-i="s_h"></span></h2>
+  <div class="folds" id="folds"></div>
+</div></section>
+
+<section id="skills" class="alt"><div class="wrap">
+  <h2 class="h2" data-r><small data-i="sk_k"></small><span data-i="sk_h"></span></h2>
+  <p class="khint" data-i="sk_hint"></p>
+  <div class="kgrid"><div class="kc" data-r tabindex="0" role="button"><em class="lg" data-lg="ps"></em><b>Photoshop</b><p data-i="k1"></p></div><div class="kc" data-r tabindex="0" role="button"><em class="lg" data-lg="ai"></em><b>Illustrator</b><p data-i="k2"></p></div><div class="kc" data-r tabindex="0" role="button"><em class="lg" data-lg="ca"></em><b>Canva</b><p data-i="k7"></p></div><div class="kc" data-r tabindex="0" role="button"><em class="lg" data-lg="cl"></em><b>Claude</b><p data-i="k8"></p></div><div class="kc" data-r tabindex="0" role="button"><em class="lg" data-lg="mg"></em><b>Magnific</b><p data-i="k9"></p></div><div class="kc" data-r tabindex="0" role="button"><em class="lg" data-lg="cc"></em><b>CapCut</b><p data-i="k10"></p></div></div>
+  <div class="kgrid ks"><div class="kc" data-r tabindex="0" role="button"><em class="lg" data-lg="ly"></em><b>Layout</b><p data-i="k3"></p></div><div class="kc" data-r tabindex="0" role="button"><em class="lg" data-lg="ty"></em><b>Typography</b><p data-i="k4"></p></div><div class="kc" data-r tabindex="0" role="button"><em class="lg" data-lg="cn"></em><b>Color &amp; Lighting</b><p data-i="k5"></p></div><div class="kc" data-r tabindex="0" role="button"><em class="lg" data-lg="mo"></em><b>Motion Design</b><p data-i="k6"></p></div></div>
+</div></section>
+
+<section id="process" class="dark"><div class="wrap">
+  <h2 class="h2" data-r><small data-i="pr_k"></small><span data-i="pr_h"></span></h2>
+  <ol class="steps" id="steps"><li data-r><i>01</i><b>Brief</b><p data-i="s1"></p></li><li data-r><i>02</i><b>Research</b><p data-i="s2"></p></li><li data-r><i>03</i><b>Concept</b><p data-i="s3"></p></li><li data-r><i>04</i><b>Design</b><p data-i="s4"></p></li><li data-r><i>05</i><b>Refine</b><p data-i="s5"></p></li><li data-r><i>06</i><b>Delivery</b><p data-i="s6"></p></li></ol>
+</div></section>
+
+<section id="resume" hidden><div class="wrap">
+  <h2 class="h2" data-r><small data-i="r_k"></small><span data-i="r_h"></span></h2>
+  <div class="rgrid"><div id="skl"></div><div id="tl"></div></div>
+</div></section>
+
+</main>
+
+<div class="contact" id="contact"><section><div class="wrap cgrid">
+  <div class="lead">
+    <h2 class="h2"><small data-i="c_k"></small><span data-i="c_h"></span></h2>
+    <p data-i="c_p"></p>
+    <span class="mail" id="mail">tienthang17tan@gmail.com</span>
+    <div class="row2">
+      <button class="btn" id="copy"><span data-i="c_copy"></span></button>
+      <span class="mono" id="copied" aria-live="polite"></span>
+    </div>
+    <div class="links" id="links"></div>
+  </div>
+  <div class="stage" id="stage" style="--L:150px">
+    <div class="strap" id="strap"></div>
+    <div class="hang" id="hang">
+      <div class="clip"></div>
+      <div class="id" id="id">
+        <div class="slotbar"></div>
+        <div class="idtop">TT.<span>Hưng Yên · 2005</span></div>
+        <div class="avatar"><div id="av">TT</div></div>
+        <div class="idname">Toàn Thắng <small>(Thawngs)</small></div>
+        <div class="idrole" data-i="h_role"></div>
+        <div class="dash"></div>
+        <button class="irow" id="cardmail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg><span>tienthang17tan@gmail.com</span></button>
+        <div class="irow" style="cursor:default"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-i="c_loc"></span></div>
+        <a class="go" id="go" href="mailto:tienthang17tan@gmail.com"><span data-i="c_send"></span></a>
+      </div>
+    </div>
+    <div class="tryit" id="tryit" data-i="c_try"></div>
+  </div>
+</div></section></div>
+
+<footer class="foot"><div class="wrap">
+  <div class="fgrid">
+    <div><a class="flogo" href="#top">THẮNG</a><p data-i="f_tag"></p></div>
+    <nav class="fnav"><a href="#about" data-i="n_about"></a><a href="#selected" data-i="n_sel"></a><a href="#work" data-i="n_work"></a><a href="#skills" data-i="n_sk"></a><a href="#process" data-i="n_pr"></a><a href="#contact" data-i="n_contact"></a></nav>
+    <div><a href="mailto:tienthang17tan@gmail.com">tienthang17tan@gmail.com</a><div class="links" id="flinks"></div></div>
+  </div>
+  <div class="fbot"><span>© 2026 Nguyễn Toàn Thắng</span><span class="tag">Designed with curiosity. Crafted with creativity.</span><a class="btn" href="#top" data-i="totop"></a></div>
+</div></footer>
+
+<div class="modal" id="tm" hidden role="dialog" aria-modal="true" aria-labelledby="tmt">
+  <div class="tcard">
+    <button class="btn tx" id="tmx" data-i="close"></button>
+    <div class="thead"><em class="lg" id="tml"></em><div><h3 id="tmt"></h3><p id="tms"></p></div></div>
+    <div class="tbody" id="tmb"></div>
+  </div>
+</div>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mt">
+  <div class="card">
+    <div class="art" id="mart"></div>
+    <div class="info">
+      <button class="btn x" id="mx" data-i="close"></button>
+      <span class="mono" id="mc"></span>
+      <h3 id="mt"></h3>
+      <p id="md" style="margin:0;color:var(--mute)"></p>
+      <div id="cs"></div>
+      <div class="csn"><button class="btn" id="prv" aria-label="Previous">←</button><button class="btn" id="nxt" aria-label="Next">→</button></div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+/* ---------- content (edit here) ---------- */
+let PHOTO=''; /* portrait path or data URL, used in About and on the ID card */
+let CV_URL=''; /* put a CV file link here to turn the card button into "Download CV" */
+const T={
+vi:{n_about:'Giới thiệu',n_work:'Danh mục',n_contact:'Liên hệ',
+h_role:'Graphic Designer',h_sub:'Thiết kế ấn phẩm quảng cáo, hình ảnh thương hiệu và truyền thông.',h_hint:'Kéo chữ để xoay 360°, chạm để quay',avail:'Sẵn sàng nhận việc và dự án',viewall:'Xem sản phẩm',sw_t:'Phần mềm sử dụng',sel_k:'Selected works',sel_h:'Những sản phẩm mình tâm đắc nhất.',vp:'Xem dự án',sk_k:'Skills & tools',sk_h:'Những gì mình làm được.',k1:'Chỉnh sửa, ghép ảnh, xử lý ánh sáng.',k2:'Vector, logo, hình họa.',k3:'Bố cục và phân cấp thông tin.',k4:'Xử lý chữ.',k5:'Màu sắc và ánh sáng.',k6:'Chuyển động poster và video.',k7:'Thiết kế nhanh ấn phẩm và bài đăng.',k8:'Hỗ trợ lên ý tưởng và nội dung.',k9:'Tìm kiếm tài nguyên, hình ảnh, tạo dựng motion chuyển động.',k10:'Dựng video và motion ngắn.',sk_hint:'Bấm vào từng mục để xem chi tiết.',td_what:'Tác dụng',td_skills:'Kỹ năng',td_use:'Mình dùng để làm design',pr_k:'Design process',pr_h:'Từ yêu cầu đến bàn giao, 6 bước.',s1:'Tiếp nhận yêu cầu.',s2:'Tìm tư liệu và moodboard.',s3:'Xây dựng ý tưởng.',s4:'Tiến hành thiết kế.',s5:'Chỉnh sửa và hoàn thiện.',s6:'Xuất file và bàn giao.',n_sel:'Dự án',n_sk:'Kỹ năng',n_pr:'Quy trình',f_tag:'Graphic Designer từ Hưng Yên, Việt Nam.',totop:'Lên đầu trang',cs_ov:'Tổng quan',cs_ob:'Mục tiêu',cs_co:'Ý tưởng',cs_pr:'Quy trình',cs_mk:'Ứng dụng',cs_tl:'Công cụ',apply:'Liên hệ ứng tuyển',cv:'Tải CV',r_k:'Hồ sơ',r_h:'Công cụ, kinh nghiệm & học vấn',tools:'Công cụ',skills:'Kỹ năng',exp:'Kinh nghiệm',edu:'Học vấn',
+a_k:'Giới thiệu',a_h:'Thiết kế gọn, có ý tưởng, nhìn là nhớ.',
+p_t:'Ảnh chân dung',p_s:'Sẽ cập nhật',
+a_p1:'Xin chào! Mình là Nguyễn Toàn Thắng, một Graphic Designer trẻ yêu thích sáng tạo hình ảnh và truyền tải thông điệp thông qua thiết kế.',
+a_p2:'Mình tập trung vào thiết kế ấn phẩm quảng cáo, poster, banner và hình ảnh truyền thông thương hiệu. Mình luôn cố gắng kết hợp tư duy bố cục, màu sắc và typography để tạo ra những sản phẩm trực quan, có tính ứng dụng.',
+f1:'Tên',f2:'Sinh năm',f3:'Quê quán',f3v:'Hưng Yên',f4:'Mảng',f4v:'Đồ họa, Branding',
+s_k:'Dịch vụ',s_h:'Mình làm gì, mình đã làm gì',
+c_k:'Liên hệ',c_h:'Cùng làm một thứ đáng nhớ?',c_p:'Bạn có dự án logo, poster, banner hay quảng cáo sản phẩm? Gửi mình vài dòng về ý tưởng, mình sẽ phản hồi sớm.',
+c_copy:'Sao chép email',c_send:'Gửi email cho mình',c_ok:'Đã sao chép',c_loc:'Hưng Yên, Việt Nam',c_try:'Thử kéo tấm thẻ',close:'Quay lại',foot:'Thiết kế bởi chính mình',
+n1:'sản phẩm',n0:'Sắp có',slot:'Thêm sản phẩm',c_cv:'Tải CV'},
+en:{n_about:'About',n_work:'Services',n_contact:'Contact',
+h_role:'Graphic Designer',h_sub:'Advertising design, brand visuals and communication.',h_hint:'Drag the name to rotate it 360°, tap to spin',avail:'Open to work and projects',viewall:'View my works',sw_t:'Software',sel_k:'Selected works',sel_h:'The work I am proudest of.',vp:'View projects',sk_k:'Skills & tools',sk_h:'What I can do.',k1:'Retouching, compositing and lighting.',k2:'Vector, logos and illustration.',k3:'Layout and information hierarchy.',k4:'Handling type.',k5:'Color and lighting.',k6:'Poster and video motion.',k7:'Quick layouts for posts and print.',k8:'Help with ideas and copy.',k9:'Finding resources and images, creating motion.',k10:'Short video and motion edits.',sk_hint:'Click any item to see details.',td_what:'What it does',td_skills:'Skills',td_use:'How I use it in my design work',pr_k:'Design process',pr_h:'From brief to delivery in 6 steps.',s1:'Receive the requirements.',s2:'Gather references and a moodboard.',s3:'Develop the idea.',s4:'Design the visuals.',s5:'Revise and polish.',s6:'Export files and hand over.',n_sel:'Works',n_sk:'Skills',n_pr:'Process',f_tag:'Graphic Designer from Hưng Yên, Vietnam.',totop:'Back to top',cs_ov:'Overview',cs_ob:'Objective',cs_co:'Concept',cs_pr:'Process',cs_mk:'Application',cs_tl:'Tools',apply:'Get in touch',cv:'Download CV',r_k:'Profile',r_h:'Tools, experience & education',tools:'Tools',skills:'Skills',exp:'Experience',edu:'Education',
+a_k:'About',a_h:'Clean ideas. Memorable at a glance.',
+p_t:'Portrait',p_s:'Coming soon',
+a_p1:'Hi! I am Nguyễn Toàn Thắng, a young Graphic Designer who loves creating visuals and communicating messages through design.',
+a_p2:'I focus on advertising materials, posters, banners and brand communication visuals. I combine layout thinking, color and typography to create clear, practical work.',
+f1:'Name',f2:'Born',f3:'From',f3v:'Hưng Yên',f4:'Focus',f4v:'Graphic, Branding',
+s_k:'Services',s_h:'What I do, what I have made',
+c_k:'Contact',c_h:'Let’s make something memorable?',c_p:'Have a logo, poster, banner or product ad in mind? Send me a few lines about your idea and I will reply soon.',
+c_copy:'Copy email',c_send:'Email me',c_ok:'Copied',c_loc:'Hưng Yên, Vietnam',c_try:'Try dragging the card',close:'Back',foot:'Designed by myself',
+n1:'works',n0:'Coming soon',slot:'Add work',c_cv:'Download CV'}};
+/* Folders. Add a project to a folder by giving it the folder key in P below. */
+const F=[
+ {k:'logo',vi:['Thiết kế logo','Dấu hiệu đơn giản, dễ nhớ, dùng tốt từ ảnh đại diện đến biển hiệu.'],en:['Logo design','Simple, memorable marks that work from avatar to signage.']},
+ {k:'brand',vi:['Hiệu ứng chuyển động cho Poster','Poster được thổi hồn bằng chuyển động: chữ, hình và ánh sáng nhịp nhàng, sẵn sàng cho Reels, TikTok và quảng cáo.'],en:['Motion effects for posters','Posters brought to life with motion: type, shapes and light moving in rhythm, ready for Reels, TikTok and ads.']},
+ {k:'social',vi:['Poster mạng xã hội','Bài đăng và poster thu hút, đúng kích thước từng nền tảng.'],en:['Social posters','Eye-catching posts and posters sized for each platform.']},
+ {k:'banner',vi:['Banner & quảng cáo','Banner web, ảnh bìa và quảng cáo trả phí, rõ thông điệp, dễ bấm.'],en:['Banners & ads','Web banners, covers and paid ads with a clear message.']},
+ {k:'product',vi:['Quảng cáo sản phẩm','Hình ảnh sản phẩm được dàn dựng để người xem muốn mua.'],en:['Product advertising','Product visuals staged so people want to buy.']},
+ {k:'video',vi:['Video ngắn','Video dạng short cho Reels, TikTok, Shorts với nhịp dựng gọn.'],en:['Short videos','Short-form video for Reels, TikTok and Shorts with tight pacing.']}];
+/* f = folder key, img = file in works/, r = width/height */
+let P=[]; /* tự sinh từ thư mục works/ qua works.json */
+
+/* ---------- logic ---------- */
+const $=s=>document.querySelector(s);
+let lang='vi';
+try{const l=localStorage.getItem('lang');if(l)lang=l;else lang=(navigator.language||'').startsWith('vi')?'vi':'en'}catch(e){}
+const open=new Set(['product']);
+
+function render(){
+  const t=T[lang];document.documentElement.lang=lang;
+  document.querySelectorAll('[data-i]').forEach(e=>e.textContent=t[e.dataset.i]);
+  $('#folds').innerHTML=F.map(f=>{
+    const items=P.map((p,i)=>[p,i]).filter(x=>x[0].f===f.k);
+    const o=open.has(f.k);
+    const thumbs=items.length?items.map(([p,i])=>`<button class="th" data-k="${i}">${p.type==='video'?`<video src="${p.img}#t=0.5" muted playsinline preload="metadata"></video><i class="play">▶</i>`:`<img src="${p.img}" alt="${p.t[lang]}" loading="lazy">`}<span>${p.t[lang]}</span></button>`).join('')
+      :`<div class="slot mono"><div><b>+</b>${t.slot}</div></div>`;
+    return `<div class="fold ${o?'open':''} ${items.length?'has':''}" data-f="${f.k}">
+      <button class="fh" aria-expanded="${o}"><span class="ficon"></span><span class="ft">${f[lang][0]}</span><span class="fc mono" data-v="${t.vp}">${items.length?items.length+' '+t.n1:t.n0}</span><span class="chev">+</span></button>
+      <div class="fb"><div><p>${f[lang][1]}</p><div class="thumbs">${thumbs}</div></div></div></div>`}).join('');
+  buildMq();renderProfile();renderSel();
+  $('#lang').textContent=lang==='vi'?'VI / en':'vi / EN';
+  if(CV_URL){const g=$('#go');g.href=CV_URL;g.target='_blank';g.firstElementChild.textContent=t.c_cv}
+  if(PHOTO){$('#phold').hidden=true;if(!$('#photo img')){const im=new Image();im.src=PHOTO;im.alt='Nguyễn Toàn Thắng';$('#photo').appendChild(im)}
+    if(!$('#av img')){const im=new Image();im.src=PHOTO;im.alt='';$('#av').textContent='';$('#av').appendChild(im)}}
+}
+$('#folds').onclick=e=>{
+  const th=e.target.closest('.th');
+  if(th){openP(th.dataset.k);return}
+  const h=e.target.closest('.fh');if(!h)return;
+  const fold=h.parentElement,k=fold.dataset.f,o=!fold.classList.contains('open');
+  fold.classList.toggle('open',o);h.setAttribute('aria-expanded',o);o?open.add(k):open.delete(k)};
+$('#lang').onclick=()=>{lang=lang==='vi'?'en':'vi';try{localStorage.setItem('lang',lang)}catch(e){}render()};
+$('#theme').onclick=()=>{const r=document.documentElement;r.dataset.theme=r.dataset.theme==='dark'?'light':'dark'};
+const close=()=>{$('#modal').hidden=true;$('#mart').innerHTML=''};
+$('#mx').onclick=close;$('#modal').onclick=e=>{if(e.target.id==='modal')close()};
+addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+async function copyMail(){let ok=false;
+  try{await navigator.clipboard.writeText('tienthang17tan@gmail.com');ok=true}catch(e){const r=document.createRange();r.selectNodeContents($('#mail'));const s=getSelection();s.removeAllRanges();s.addRange(r)}
+  if(ok){$('#copied').textContent=T[lang].c_ok;setTimeout(()=>$('#copied').textContent='',2000)}}
+$('#copy').onclick=copyMail;$('#cardmail').onclick=copyMail;
+
+/* ---------- băng chuyền: chữ và thanh màu chạy cùng tốc độ ---------- */
+const WORDS=['Poster Design','Banner Ads','Social Media','Product Ads','Logo & Branding','Motion Poster','Short Video'];
+function buildMq(){const mq=$('#mq'),set=WORDS.map(x=>`<span>${x}</span>`).join('');
+  mq.innerHTML=set;const w=mq.scrollWidth||1200;
+  mq.innerHTML=set.repeat(Math.ceil(innerWidth/w)+2);
+  mq.style.setProperty('--w',w+'px');mq.style.setProperty('--dur',(w/80)+'s')}
+addEventListener('resize',buildMq);
+if(document.fonts)document.fonts.ready.then(buildMq);
+
+/* ---------- hero: chữ THẮNG 3D + outer glow + lửa cháy + xoay 360° ---------- */
+const RM=false; /* hiệu ứng luôn chạy, kể cả khi máy bật "giảm chuyển động" */
+const hero=$('#hero'),box=$('#s3'),el=$('#t3');
+{
+const txt=el.dataset.t,N=36,H=(N-1)/2;
+const mix=(a,b,t)=>a.map((v,i)=>Math.round(v+(b[i]-v)*t)).join();
+for(let i=0;i<N;i++){
+  const s=document.createElement('em');s.className='L'+(i===N-1?' base face':'');s.textContent=txt;s.setAttribute('aria-hidden','true');
+  s.style.transform=`translateZ(${((i-H)*.0085).toFixed(4)}em)`;
+  if(i<2)s.style.color='rgb(143,116,255)';
+  else if(i<N-3)s.style.color='rgb('+mix([40,22,110],[106,71,245],(i-2)/(N-6))+')';
+  else if(i<N-1)s.style.color='rgb(255,122,89)';
+  el.appendChild(s)}
+/* outer glow: 2 lớp chữ mờ phía sau, co lại khi chữ xoay nghiêng */
+const g=document.createElement('div');g.className='glow';g.setAttribute('aria-hidden','true');
+for(const b of [42,12]){const e=document.createElement('em');e.className='gl';e.textContent=txt;e.style.setProperty('--b',b+'px');g.appendChild(e)}
+box.insertBefore(g,el);
+/* lửa: hạt lửa bay lên từ mép trên của các nét chữ */
+const cv=document.createElement('canvas');cv.className='fire';cv.setAttribute('aria-hidden','true');el.appendChild(cv);
+const cx=cv.getContext('2d');
+const SP=['255,246,180','255,168,66','255,92,147','122,92,255'].map(c=>{const k=document.createElement('canvas');k.width=k.height=64;const q=k.getContext('2d'),r=q.createRadialGradient(32,32,0,32,32,32);
+  r.addColorStop(0,`rgba(${c},1)`);r.addColorStop(.4,`rgba(${c},.5)`);r.addColorStop(1,`rgba(${c},0)`);q.fillStyle=r;q.fillRect(0,0,64,64);return k});
+let pts=[],edge=[],F=100,W=1,Hh=1,head=0,dpr=1;const ps=[];
+function sizes(){
+  const cs=getComputedStyle(el);F=parseFloat(cs.fontSize)||100;W=el.offsetWidth||1;Hh=el.offsetHeight||1;
+  g.style.width=W+'px';g.style.height=Hh+'px';
+  head=Math.round(F*.24);dpr=Math.min(devicePixelRatio||1,2);
+  cv.width=Math.round(W*dpr);cv.height=Math.round((Hh+head)*dpr);cv.style.width=W+'px';cv.style.height=(Hh+head)+'px';cv.style.top=-head+'px';
+  const pad=Math.round(F*.3),m=document.createElement('canvas');m.width=Math.round(W);m.height=Math.round(Hh+pad);
+  const q=m.getContext('2d');q.font=`760 ${F}px "Bricolage Grotesque",system-ui,sans-serif`;q.textBaseline='alphabetic';
+  if('letterSpacing' in q)q.letterSpacing=(-.035*F)+'px';
+  const mt=q.measureText(txt),fa=mt.fontBoundingBoxAscent||F*.95,fd=mt.fontBoundingBoxDescent||F*.25,lh=parseFloat(cs.lineHeight)||F*.95;
+  q.setTransform(mt.width?W/mt.width:1,0,0,1,0,0);q.fillText(txt,0,(lh-(fa+fd))/2+fa+pad);
+  const d=q.getImageData(0,0,m.width,m.height).data;pts=[];
+  edge=[];for(let x=0;x<m.width;x+=4){let was=false;for(let y=0;y<m.height;y+=2){const on=d[(y*m.width+x)*4+3]>140;if(on){pts.push([x,y-pad]);if(!was)edge.push([x,y-pad])}was=on}}
+  ps.length=0}
+new ResizeObserver(sizes).observe(el);
+if(document.fonts)document.fonts.ready.then(sizes);
+function fire(f){
+  cx.setTransform(dpr,0,0,dpr,0,0);cx.clearRect(0,0,W,Hh+head);if(!pts.length)return;
+  cx.globalCompositeOperation='lighter';
+  const n=(F<160?7:14)*f,c=Math.floor(n)+(Math.random()<n%1?1:0);
+  for(let i=0;i<c;i++){const top=Math.random()<.2&&edge.length,a=top?edge:pts,p=a[(Math.random()*a.length)|0];
+    ps.push({x:p[0]+(Math.random()-.5)*4,y:p[1]+(Math.random()-.5)*4,vx:(Math.random()-.5)*.4,vy:-(.003+Math.random()*.004)*F,l:0,L:16+Math.random()*16,s:(.022+Math.random()*.028)*F})}
+  for(let i=ps.length-1;i>=0;i--){const p=ps[i];p.l+=f;if(p.l>p.L){ps[i]=ps[ps.length-1];ps.pop();continue}
+    const k=p.l/p.L;p.x+=(p.vx+Math.sin((p.l+p.y)*.09)*.6)*f;p.y+=p.vy*(1-k*.45)*f;
+    const si=k<.2?0:k<.5?1:k<.8?2:3,r=p.s*(1-k*.65)*1.5;
+    cx.globalAlpha=Math.min(1,(1-k)*1.3)*(si===3?.25:.45);
+    cx.drawImage(SP[si],p.x-r,p.y+head-r,r*2,r*2)}
+  cx.globalAlpha=1;cx.globalCompositeOperation='source-over'}
+/* xoay: kéo để xoay 360°, thả ra thì tự quay về mặt trước; chạm nhanh = quay 1 vòng */
+const S={ry:0,rx:-8,vy:0,drag:false,lx:0,ly:0,tx:0,ty:0,px:0,py:0};let vis=true,dn=0,mv=0,last=0;
+new IntersectionObserver(es=>vis=es[0].isIntersecting).observe(hero);
+box.addEventListener('pointerdown',e=>{S.drag=true;S.lx=e.clientX;S.ly=e.clientY;S.vy=0;dn=performance.now();mv=0;box.setPointerCapture(e.pointerId);box.style.cursor='grabbing'});
+box.addEventListener('pointermove',e=>{if(!S.drag)return;const dx=e.clientX-S.lx,dy=e.clientY-S.ly;S.lx=e.clientX;S.ly=e.clientY;mv+=Math.abs(dx)+Math.abs(dy);
+  S.ry+=dx*.55;S.rx=Math.max(-55,Math.min(55,S.rx-dy*.4));S.vy=dx*.55});
+box.addEventListener('pointerup',()=>{S.drag=false;box.style.cursor='grab';if(mv<6&&performance.now()-dn<350)S.vy=26});
+box.addEventListener('pointercancel',()=>{S.drag=false;box.style.cursor='grab'});
+hero.addEventListener('pointerleave',()=>{S.tx=S.ty=0});
+hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();hero.style.setProperty('--sx',(e.clientX-r.left)+'px');hero.style.setProperty('--sy',(e.clientY-r.top)+'px');S.tx=(e.clientX-r.left)/r.width*2-1;S.ty=(e.clientY-r.top)/r.height*2-1});
+function frame(t){
+  const f=Math.min(2.5,(t-last)/16.67||1);last=t;
+  if(vis){
+    S.px+=(S.tx-S.px)*.07;S.py+=(S.ty-S.py)*.07;
+    if(!S.drag){S.ry+=S.vy*f;S.vy*=Math.pow(.955,f);
+      if(Math.abs(S.vy)<.4){S.vy=0;S.ry+=(Math.round(S.ry/360)*360-S.ry)*.045}
+      S.rx+=(-8-S.py*9-S.rx)*.05}
+    const sway=(S.drag||S.vy)?0:Math.sin(t/1500)*10+S.px*12,ry=S.ry+sway;
+    el.style.transform=`rotateX(${S.rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg)`;
+    g.style.transform=`scaleX(${Math.max(.3,Math.abs(Math.cos(ry*Math.PI/180))).toFixed(3)})`;
+    el.style.setProperty('--sh',(50+50*Math.sin(ry*Math.PI/180+t/1800)).toFixed(1)+'%');
+    fire(f)}
+  requestAnimationFrame(frame)}
+requestAnimationFrame(frame)}
+
+/* ---------- hanging ID card: drag it, it swings back like a pendulum ---------- */
+const stage=$('#stage'),hang=$('#hang'),strap=$('#strap'),idc=$('#id'),tryit=$('#tryit');
+const S={x:0,y:0,vx:0,vy:0,drag:false,ox:0,oy:0,g:0,lx:0,ly:0,seen:false};
+let L=150,stageVis=false;
+new IntersectionObserver(es=>stageVis=es[0].isIntersecting).observe(stage);
+hang.addEventListener('pointerdown',e=>{if(e.target.closest('a,button'))return;
+  S.drag=true;S.ox=e.clientX-S.x;S.oy=e.clientY-S.y;S.lx=S.x;S.ly=S.y;hang.classList.add('drag');hang.setPointerCapture(e.pointerId);
+  if(!S.seen){S.seen=true;tryit.classList.add('off')}});
+hang.addEventListener('pointermove',e=>{
+  const r=idc.getBoundingClientRect();idc.style.setProperty('--gx',((e.clientX-r.left)/r.width*100)+'%');idc.style.setProperty('--gy',((e.clientY-r.top)/r.height*100)+'%');
+  if(!S.drag)return;const w=stage.clientWidth;
+  S.x=Math.max(-w*.9,Math.min(w*.9,e.clientX-S.ox));S.y=Math.max(-120,Math.min(320,e.clientY-S.oy))});
+const release=()=>{S.drag=false;hang.classList.remove('drag')};
+hang.addEventListener('pointerup',release);hang.addEventListener('pointercancel',release);
+function cardFrame(t){
+  L=parseFloat(getComputedStyle(stage).getPropertyValue('--L'))||150;
+  if(S.drag){S.vx=(S.x-S.lx)*.6;S.vy=(S.y-S.ly)*.6;S.lx=S.x;S.ly=S.y}
+  else if(!RM){const k=.045,c=.06;S.vx+=-k*S.x-c*S.vx*6*.16;S.vy+=-k*S.y-c*S.vy*6*.16;S.vx*=.99;S.vy*=.99;S.x+=S.vx;S.y+=S.vy}
+  else{S.x*=.85;S.y*=.85}
+  const idle=(S.drag||RM)?0:Math.sin(t/1400)*1.1;
+  const len=Math.hypot(S.x,L+S.y),ang=Math.atan2(S.x,L+S.y)*180/Math.PI;
+  strap.style.height=len+'px';strap.style.transform=`rotate(${-ang}deg)`;
+  hang.style.transform=`translate(${S.x}px,${S.y}px) rotate(${-ang*.6+idle+S.vx*.2}deg)`;
+  const target=S.drag?1:Math.min(1,Math.hypot(S.vx,S.vy)/6);S.g+=(target-S.g)*.12;
+  idc.style.setProperty('--g',S.g.toFixed(3))}
+
+function loop(t){if(stageVis)cardFrame(t);requestAnimationFrame(loop)}
+requestAnimationFrame(loop);
+/* hồ sơ: đọc profile.txt (công cụ, kỹ năng, học vấn, liên kết); mục nào để trống thì tự ẩn */
+let PR={};
+const nk=k=>k.replace(/đ/gi,'d').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+const eh=x=>String(x).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const url=v=>/^https?:/i.test(v)?v:'https://'+v;
+function renderProfile(){
+  const t=T[lang],o=PR,one=k=>(o[k]||[])[0];
+  const list=k=>(o[k]||[]).flatMap(v=>v.split(',')).map(x=>x.trim()).filter(Boolean);
+  const chips=a=>`<div class="chips">${a.map(x=>`<span>${eh(x)}</span>`).join('')}</div>`;
+  const row=k=>(o[k]||[]).map(v=>{const p=v.split('|').map(x=>x.trim());return `<div><small class="mono">${eh(p[0]||'')}</small><b>${eh(p[1]||'')}</b>${p[2]?`<p>${eh(p[2])}</p>`:''}</div>`}).join('');
+  const tools=list('cong cu'),sk=list('ky nang'),exp=row('kinh nghiem'),edu=row('hoc van');
+  $('#skl').innerHTML=(tools.length?`<h3>${t.tools}</h3>${chips(tools)}`:'')+(sk.length?`<h3>${t.skills}</h3>${chips(sk)}`:'');
+  $('#tl').innerHTML=(exp?`<h3>${t.exp}</h3><div class="tl">${exp}</div>`:'')+(edu?`<h3>${t.edu}</h3><div class="tl">${edu}</div>`:'');
+  $('#resume').hidden=!($('#skl').innerHTML||$('#tl').innerHTML);
+  const L=[],ph=one('dien thoai'),za=one('zalo');
+  if(ph)L.push([ph,'tel:'+ph.replace(/[^\d+]/g,'')]);
+  if(za)L.push(['Zalo',/^[\d\s.]+$/.test(za)?'https://zalo.me/'+za.replace(/\D/g,''):url(za)]);
+  [['facebook','Facebook'],['instagram','Instagram'],['behance','Behance'],['tiktok','TikTok'],['linkedin','LinkedIn'],['youtube','YouTube'],['github','GitHub']].forEach(([k,n])=>{const v=one(k);if(v)L.push([n,url(v)])});
+  $('#flinks').innerHTML=$('#links').innerHTML=L.map(([n,h])=>`<a href="${eh(h)}" target="_blank" rel="noopener">${eh(n)}</a>`).join('');
+  $('#apply').href='mailto:tienthang17tan@gmail.com?subject='+encodeURIComponent(lang==='vi'?'Ứng tuyển / Hợp tác':'Job / Collaboration');
+  const cb=$('#cvbtn');cb.hidden=!CV_URL;if(CV_URL)cb.href=CV_URL}
+fetch('profile.txt?'+Date.now()).then(r=>r.ok?r.text():'').then(x=>{const o={};x.split(/\r?\n/).forEach(l=>{l=l.trim();if(!l||l[0]==='#')return;const i=l.indexOf(':');if(i<1)return;const v=l.slice(i+1).trim();if(v)(o[nk(l.slice(0,i))]=o[nk(l.slice(0,i))]||[]).push(v)});PR=o;render()}).catch(()=>{});
+/* CV: chỉ cần up file cv.pdf cùng chỗ với index.html là nút Tải CV tự hiện */
+fetch('cv.pdf',{method:'HEAD'}).then(r=>{if(r.ok&&(r.headers.get('content-type')||'').includes('pdf')){CV_URL='cv.pdf';render()}}).catch(()=>{});
+/* ---------- nâng cấp: dự án nổi bật, case study, hạt sáng, quy trình ---------- */
+F.push({k:'poster',vi:['Thiết kế Poster','Poster quảng cáo, sự kiện và thể thao với bố cục mạnh, màu sắc rõ ràng.'],en:['Poster design','Advertising, event and sports posters with strong layout and clear color.']},{k:'identity',vi:['Branding','Logo đi cùng màu sắc, chữ và quy tắc để thương hiệu nhất quán.'],en:['Branding','Logo with color, type and rules for a consistent brand.']});
+{const O=['poster','banner','social','product','logo','identity','brand','video'];F.sort((a,b)=>O.indexOf(a.k)-O.indexOf(b.k))}
+function renderSel(){const t=T[lang],it=P.map((p,i)=>[p,i]).slice(0,8);
+  $('#sgrid').innerHTML=it.length?it.map(([p,i],n)=>{const fl=F.find(f=>f.k===p.f),ti=eh(p.t[lang]);
+    return `<button class="sc s${n%8}" data-k="${i}">${p.type==='video'?`<video src="${p.img}#t=0.5" muted loop playsinline preload="metadata"></video><i class="play">▶</i>`:`<img src="${p.img}" alt="${ti}" loading="lazy">`}<span class="cap"><small>${fl?fl[lang][0]:''}</small><b>${ti}</b><em>${eh((p.d[lang]||'').slice(0,80))}</em></span></button>`}).join(''):`<div class="swait"><b>+</b> ${t.slot}</div>`}
+$('#sgrid').onclick=e=>{const c=e.target.closest('.sc');if(c)openP(c.dataset.k)};
+const vOf=e=>{const c=e.target.closest&&e.target.closest('.sc');return c&&c.querySelector('video')};
+$('#sgrid').onmouseover=e=>{const v=vOf(e);if(v)v.play().catch(()=>{})};
+$('#sgrid').onmouseout=e=>{const v=vOf(e);if(v&&!(e.relatedTarget&&e.relatedTarget.closest&&e.relatedTarget.closest('.sc')===e.target.closest('.sc'))){v.pause();v.currentTime=.5}};
+/* case study: ảnh/video lớn + mô tả; nếu file .txt cùng tên có dòng "Mục tiêu:", "Ý tưởng:", "Quy trình:", "Ứng dụng:", "Công cụ:" thì hiện thêm */
+const LBL={'tong quan':'cs_ov','overview':'cs_ov','muc tieu':'cs_ob','objective':'cs_ob','y tuong':'cs_co','concept':'cs_co','quy trinh':'cs_pr','process':'cs_pr','ung dung':'cs_mk','mockup':'cs_mk','cong cu':'cs_tl','tools':'cs_tl'};
+let csI=-1;
+function openP(i){i=+i;const p=P[i];if(!p)return;csI=i;const t=T[lang],fl=F.find(f=>f.k===p.f);
+  $('#mart').innerHTML=p.type==='video'?`<video src="${p.img}" controls autoplay playsinline loop></video>`:`<img src="${p.img}" alt="${eh(p.t[lang])}">`;
+  $('#mc').textContent=fl?fl[lang][0]:'';$('#mt').textContent=p.t[lang];$('#md').textContent=p.d[lang]||'';$('#cs').innerHTML='';
+  $('#modal').hidden=false;$('#mx').focus();
+  fetch(p.img.replace(/\.[^./]+$/,'.txt')).then(r=>r.ok?r.text():'').then(x=>{if(csI!==i||!x)return;const rows=[];
+    x.split(/\r?\n/).forEach(l=>{const m=l.trim().match(/^([^:]{2,24}):\s*(.+)$/),k=m&&LBL[nk(m[1])];if(k)rows.push([k,m[2]])});
+    $('#cs').innerHTML=rows.map(([k,v])=>`<div><small class="mono">${t[k]}</small><p>${eh(v)}</p></div>`).join('')}).catch(()=>{})}
+$('#prv').onclick=()=>openP((csI-1+P.length)%P.length);$('#nxt').onclick=()=>openP((csI+1)%P.length);
+/* hạt sáng sau hero + chữ thu nhỏ khi cuộn (đứng yên nếu máy bật giảm chuyển động) */
+{const cv=$('#pt'),cx=cv.getContext('2d'),mm=matchMedia('(prefers-reduced-motion:reduce)');let W=0,H=0,D=[],on=true;
+  const init=()=>{W=cv.width=hero.clientWidth;H=cv.height=hero.clientHeight;D=Array.from({length:W<700?22:46},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.6,v:Math.random()*.25+.08,a:Math.random()*6.28,c:Math.random()<.5?'255,92,147':'180,160,255'}))};
+  init();addEventListener('resize',init);new IntersectionObserver(es=>on=es[0].isIntersecting).observe(hero);
+  (function pf(){if(on){cx.clearRect(0,0,W,H);for(const d of D){if(!mm.matches){d.y-=d.v;d.a+=.02;if(d.y<-4){d.y=H+4;d.x=Math.random()*W}}
+    cx.fillStyle=`rgba(${d.c},${.35+.3*Math.sin(d.a)})`;cx.beginPath();cx.arc(d.x+Math.sin(d.a)*6,d.y,d.r,0,6.283);cx.fill()}}requestAnimationFrame(pf)})();
+  const nm=$('#name');addEventListener('scroll',()=>{if(mm.matches)return;const p=Math.min(1,scrollY/(hero.offsetHeight*.7));nm.style.transform=`scale(${1-p*.18}) translateY(${-p*30}px)`;nm.style.opacity=1-p*.85},{passive:true})}
+/* quy trình: đường nối phát sáng chạy theo thanh cuộn */
+{const st=$('#steps'),ls=[...st.children],up=()=>{const r=st.getBoundingClientRect(),p=Math.max(0,Math.min(1,(innerHeight*.85-r.top)/(r.height+innerHeight*.2)));
+  st.style.setProperty('--p',p.toFixed(3));ls.forEach((l,i)=>l.classList.toggle('on',p>=(i+.4)/ls.length))};
+  addEventListener('scroll',up,{passive:true});addEventListener('resize',up);up()}
+/* ---------- logo phần mềm: vẽ sẵn bằng SVG; nếu up file vào thư mục logos/ (photoshop.svg, canva.png...) thì dùng file thật ---------- */
+const LG={
+ ps:['photoshop','#31A8FF','<svg viewBox="0 0 64 64"><rect x="1.5" y="1.5" width="61" height="61" rx="14" fill="#001E36" stroke="#31A8FF" stroke-width="3"/><text x="32" y="43.5" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700" letter-spacing="-1" text-anchor="middle" fill="#31A8FF">Ps</text></svg>'],
+ ai:['illustrator','#FF9A00','<svg viewBox="0 0 64 64"><rect x="1.5" y="1.5" width="61" height="61" rx="14" fill="#330000" stroke="#FF9A00" stroke-width="3"/><text x="32" y="43.5" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700" letter-spacing="-1" text-anchor="middle" fill="#FF9A00">Ai</text></svg>'],
+ ca:['canva','#7D5CFF','<svg viewBox="0 0 64 64"><defs><linearGradient id="__ID__" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00C4CC"/><stop offset="1" stop-color="#7D2AE8"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="url(#__ID__)"/><text x="32" y="39" font-family="Georgia,serif" font-size="19" font-style="italic" font-weight="700" text-anchor="middle" fill="#fff">Canva</text></svg>'],
+ cl:['claude','#D97757','<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#D97757"/><g stroke="#FBF2E8" stroke-width="4.6" stroke-linecap="round" fill="none"><path d="M37.0 32.0L56.0 32.0"/><path d="M36.3 34.5L45.0 39.5"/><path d="M34.5 36.3L43.0 51.1"/><path d="M32.0 37.0L32.0 45.0"/><path d="M29.5 36.3L20.0 52.8"/><path d="M27.7 34.5L18.1 40.0"/><path d="M27.0 32.0L9.0 32.0"/><path d="M27.7 29.5L19.9 25.0"/><path d="M29.5 27.7L20.0 11.2"/><path d="M32.0 27.0L32.0 17.0"/><path d="M34.5 27.7L43.0 12.9"/><path d="M36.3 29.5L43.3 25.5"/></g></svg>'],
+ mg:['magnific','#C9B8FF','<svg viewBox="13 5 584 584"><circle cx="305" cy="297" r="292" fill="#000"/><path d="M213 122H302L312 190 322 122H402L458 335H383L312 242 237 335H160Z" fill="#fff"/><text x="137" y="446" textLength="341" lengthAdjust="spacingAndGlyphs" font-family="Poppins,Montserrat,Arial,sans-serif" font-size="84" font-weight="500" fill="#fff">Magnific</text></svg>'],
+ cc:['capcut','#4CD8FF','<svg viewBox="46 72 356 356"><rect x="48" y="72" width="352" height="356" rx="72" fill="#fff"/><rect x="124" y="172" width="188" height="168" rx="22" fill="none" stroke="#000" stroke-width="28"/><path d="M150 231L352 334M150 278L354 170" stroke="#fff" stroke-width="46" fill="none"/><path d="M112 212L352 334M112 298L354 170" stroke="#000" stroke-width="28" fill="none"/></svg>'],
+ ly:['','#FF5C93','<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1b1240"/><g fill="none" stroke="#ff8fb3" stroke-width="3"><rect x="14" y="14" width="36" height="10" rx="2"/><rect x="14" y="30" width="16" height="20" rx="2"/><rect x="34" y="30" width="16" height="9" rx="2"/><rect x="34" y="43" width="16" height="7" rx="2"/></g></svg>'],
+ ty:['','#FFB08A','<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1b1240"/><text x="32" y="43" font-family="Georgia,serif" font-size="30" font-weight="700" text-anchor="middle" fill="#ffb08a">Aa</text></svg>'],
+ cn:['','#FF8FB3','<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1b1240"/><circle cx="26" cy="32" r="13" fill="#ff5c93" opacity=".9"/><circle cx="38" cy="32" r="13" fill="#4cd8ff" opacity=".75"/></svg>'],
+ mo:['','#8F74FF','<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1b1240"/><circle cx="32" cy="32" r="18" fill="none" stroke="#8f74ff" stroke-width="3"/><path d="M27 23L43 32 27 41Z" fill="#8f74ff"/></svg>']
+};
+let lgN=0;
+document.querySelectorAll('[data-lg]').forEach(e=>{const [n,g,svg]=LG[e.dataset.lg];e.style.setProperty('--g',g);e.innerHTML=svg.replace(/__ID__/g,'lg'+(++lgN));
+  if(n){const ex=['svg','png','webp','jpg'],t=i=>{if(i>=ex.length)return;const im=new Image();im.alt=n;im.onload=()=>e.replaceChildren(im);im.onerror=()=>t(i+1);im.src='logos/'+n+'.'+ex[i]};t(0)}});
+/* ---------- bấm vào phần mềm / kỹ năng để xem chi tiết ---------- */
+const KD={"ps":{"vi":{"s":"Chỉnh sửa, ghép ảnh và xử lý ánh sáng.","w":["Chỉnh sửa và retouch ảnh","Ghép ảnh, tách nền","Xử lý màu sắc và ánh sáng"],"k":["Retouch","Photo manipulation","Layer & mask","Color grading"],"u":"Mình dùng Photoshop để dựng poster, banner và hình quảng cáo sản phẩm: tách nền, ghép các lớp ảnh, cân chỉnh ánh sáng và màu sắc để sản phẩm nổi bật và đúng tinh thần thương hiệu."},"en":{"s":"Retouching, compositing and lighting.","w":["Photo editing and retouching","Compositing and background removal","Color and lighting correction"],"k":["Retouching","Photo manipulation","Layers & masks","Color grading"],"u":"I use Photoshop to build posters, banners and product ads: cutting out subjects, compositing layers and balancing light and color so the product stands out and fits the brand."}},"ai":{"vi":{"s":"Vector, logo và hình họa.","w":["Vẽ vector, phóng to không vỡ nét","Thiết kế logo và biểu tượng","Minh họa, hình họa"],"k":["Pen tool","Logo design","Vector illustration","Typography"],"u":"Mình dùng Illustrator để vẽ logo, biểu tượng và các chi tiết hình họa cần sắc nét ở mọi kích thước, sau đó đưa sang Photoshop hoặc bố cục poster."},"en":{"s":"Vector, logos and illustration.","w":["Vector drawing that scales without losing quality","Logo and icon design","Illustration"],"k":["Pen tool","Logo design","Vector illustration","Typography"],"u":"I use Illustrator to draw logos, icons and graphic details that must stay sharp at any size, then bring them into Photoshop or poster layouts."}},"ca":{"vi":{"s":"Thiết kế nhanh ấn phẩm và bài đăng.","w":["Thiết kế nhanh với bố cục có sẵn","Làm bài đăng, banner, ấn phẩm","Xuất nhiều kích thước và định dạng"],"k":["Social media design","Dựng bố cục nhanh","Xuất nhiều kích thước"],"u":"Mình dùng Canva khi cần hoàn thiện nhanh bài đăng mạng xã hội và ấn phẩm, hoặc dựng bản nháp bố cục trước khi tinh chỉnh kỹ hơn."},"en":{"s":"Quick layouts for posts and print.","w":["Fast design with ready-made layouts","Posts, banners and printed pieces","Export in many sizes and formats"],"k":["Social media design","Quick layouts","Multi-size export"],"u":"I use Canva to finish social posts and print pieces quickly, or to sketch a layout draft before refining it in more detail."}},"cl":{"vi":{"s":"Hỗ trợ lên ý tưởng và nội dung.","w":["Trợ lý AI trò chuyện","Giúp lên ý tưởng và viết nội dung","Hỗ trợ sắp xếp công việc và kỹ thuật"],"k":["Brainstorm ý tưởng","Viết nội dung","Prompt & quy trình"],"u":"Mình dùng Claude để lên ý tưởng, viết nội dung và mô tả dự án, sắp xếp quy trình làm việc, và hỗ trợ phần kỹ thuật như dựng trang portfolio này."},"en":{"s":"Help with ideas and copy.","w":["Conversational AI assistant","Helps with ideas and writing","Supports planning and technical work"],"k":["Brainstorming","Copywriting","Prompts & workflow"],"u":"I use Claude to come up with ideas, write copy and project descriptions, organize my workflow, and help with technical work such as building this portfolio."}},"mg":{"vi":{"s":"Tìm kiếm tài nguyên, hình ảnh, tạo dựng motion chuyển động.","w":["Tìm kiếm tài nguyên thiết kế","Tìm kiếm và tạo hình ảnh","Tạo dựng motion chuyển động"],"k":["Tìm tài nguyên","Hình ảnh","Motion"],"u":"Mình dùng Magnific để tìm tài nguyên và hình ảnh cho dự án, và tạo dựng chuyển động cho poster để ý tưởng sống động hơn."},"en":{"s":"Finding resources and images, creating motion.","w":["Searching for design resources","Finding and creating images","Building motion and animation"],"k":["Resource search","Imagery","Motion"],"u":"I use Magnific to find resources and images for my projects, and to create motion for posters so ideas feel more alive."}},"cc":{"vi":{"s":"Dựng video và motion ngắn.","w":["Dựng video ngắn","Cắt ghép, thêm hiệu ứng, chữ và nhạc","Xuất đúng tỷ lệ cho Reels, TikTok, Shorts"],"k":["Dựng video","Motion text","Nhịp dựng"],"u":"Mình dùng CapCut để dựng motion poster và video ngắn: cắt nhịp, thêm hiệu ứng chuyển động và chữ, xuất đúng tỷ lệ cho Reels và TikTok."},"en":{"s":"Short video and motion edits.","w":["Short video editing","Cuts, effects, text and music","Export for Reels, TikTok and Shorts"],"k":["Video editing","Motion text","Pacing"],"u":"I use CapCut to edit motion posters and short videos: cutting to rhythm, adding motion effects and text, and exporting in the right ratio for Reels and TikTok."}},"ly":{"vi":{"s":"Bố cục và phân cấp thông tin.","w":["Sắp xếp bố cục cân đối","Phân cấp thông tin rõ ràng","Dẫn mắt người xem"],"k":["Grid & alignment","Visual hierarchy","Khoảng trắng"],"u":"Mình bắt đầu mỗi thiết kế từ bố cục: xác định thông tin chính, chia lưới và tạo điểm nhấn để người xem đọc đúng thứ tự."},"en":{"s":"Layout and information hierarchy.","w":["Balanced layouts","Clear information hierarchy","Guiding the viewer’s eye"],"k":["Grid & alignment","Visual hierarchy","White space"],"u":"I start every design from the layout: deciding the key information, setting a grid and creating focal points so people read in the right order."}},"ty":{"vi":{"s":"Xử lý chữ.","w":["Chọn và phối font","Dùng chữ lớn làm điểm nhấn","Giữ chữ dễ đọc"],"k":["Font pairing","Kerning & leading","Chữ làm hình"],"u":"Mình xử lý chữ như một phần của hình ảnh: chọn font hợp tinh thần dự án, chỉnh khoảng cách và kích cỡ để chữ vừa đẹp vừa dễ đọc."},"en":{"s":"Handling type.","w":["Choosing and pairing fonts","Big type as a focal point","Keeping text readable"],"k":["Font pairing","Kerning & leading","Type as image"],"u":"I treat type as part of the image: choosing fonts that fit the project and adjusting spacing and size so text looks good and stays readable."}},"cn":{"vi":{"s":"Màu sắc và ánh sáng.","w":["Chọn bảng màu theo thương hiệu","Tạo tương phản và điểm nhấn","Xử lý ánh sáng, đổ bóng"],"k":["Color palette","Contrast","Lighting & shadow"],"u":"Mình phối màu theo thương hiệu và cảm xúc cần truyền tải, dùng ánh sáng và bóng đổ để tạo chiều sâu cho sản phẩm."},"en":{"s":"Color and lighting.","w":["Brand-based color palettes","Contrast and accents","Lighting and shadows"],"k":["Color palette","Contrast","Lighting & shadow"],"u":"I choose colors to suit the brand and the feeling to convey, using light and shadow to give products depth."}},"mo":{"vi":{"s":"Chuyển động poster và video.","w":["Làm poster chuyển động","Hiệu ứng cho chữ và hình","Video ngắn"],"k":["Motion poster","Animation cơ bản","Nhịp chuyển động"],"u":"Mình biến poster tĩnh thành motion poster: tạo chuyển động cho chữ, hình và ánh sáng, giữ nhịp gọn để phù hợp Reels, TikTok và quảng cáo."},"en":{"s":"Poster and video motion.","w":["Motion posters","Effects for type and imagery","Short videos"],"k":["Motion poster","Basic animation","Motion rhythm"],"u":"I turn static posters into motion posters: animating type, imagery and light, keeping the rhythm tight for Reels, TikTok and ads."}}};
+const tm=$('#tm');
+function openT(el){const src=el.querySelector('[data-lg]'),k=src&&src.dataset.lg,d=k&&KD[k];if(!d)return;const t=T[lang],x=d[lang],b=el.querySelector('b'),L=$('#tml');
+  L.innerHTML=src.innerHTML;L.dataset.lg=k;L.style.setProperty('--g',src.style.getPropertyValue('--g'));
+  $('#tmt').textContent=b?b.textContent:el.textContent.trim();$('#tms').textContent=x.s;
+  $('#tmb').innerHTML=`<h4>${t.td_what}</h4><ul>${x.w.map(v=>`<li>${eh(v)}</li>`).join('')}</ul><h4>${t.td_skills}</h4><div class="chips">${x.k.map(v=>`<span>${eh(v)}</span>`).join('')}</div><h4>${t.td_use}</h4><p>${eh(x.u)}</p>`;
+  tm.hidden=false;$('#tmx').focus()}
+document.addEventListener('click',e=>{const c=e.target.closest('.kc,.sw span');if(c)openT(c)});
+document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('.kc,.sw span')){e.preventDefault();openT(e.target)}if(e.key==='Escape')tm.hidden=true});
+$('#tmx').onclick=()=>tm.hidden=true;tm.onclick=e=>{if(e.target===tm)tm.hidden=true};
+/* ảnh chân dung: chỉ cần up file avatar.jpg (hoặc .png/.webp) cùng chỗ với index.html là tự hiện */
+(function(){const c=['avatar.jpg','avatar.jpeg','avatar.png','avatar.webp','avatar.JPG','avatar.PNG'];
+  function t(i){if(i>=c.length)return;const im=new Image();im.onload=()=>{PHOTO=c[i];render()};im.onerror=()=>t(i+1);im.src=c[i]}t(0)})();
+render();
+fetch('works.json?'+Date.now()).then(r=>r.json()).then(d=>{P=d;render()}).catch(()=>{});
+</script>
+
+</body>
+</html>
